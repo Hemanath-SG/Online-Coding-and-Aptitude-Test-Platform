@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: online-coding-test
+    env: java
+    buildCommand: mvn -B package
+    startCommand: java -Dserver.port=$PORT -jar target/*.jar
+    autoDeploy: true
